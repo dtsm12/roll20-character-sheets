@@ -7,6 +7,49 @@ Could do with more efficient class definition
 */
 @import url('https://fonts.googleapis.com/css?family=Blinker|Bangers');
 
+/* ---------------- variable textarea rows selections */
+
+.sheet-textarea-1-row,
+.sheet-textarea-2-row,
+.sheet-textarea-3-row,
+.sheet-textarea-4-row,
+.sheet-textarea-5-row,
+.sheet-textarea-6-row {
+    display: none;
+}
+
+input.sheet-textarea-row-size[value="1"] ~ .sheet-textarea-1-row,
+input.sheet-textarea-row-size[value="2"] ~ .sheet-textarea-2-row,
+input.sheet-textarea-row-size[value="3"] ~ .sheet-textarea-3-row,
+input.sheet-textarea-row-size[value="4"] ~ .sheet-textarea-4-row,
+input.sheet-textarea-row-size[value="5"] ~ .sheet-textarea-5-row,
+input.sheet-textarea-row-size[value="6"] ~ .sheet-textarea-6-row {
+    display: inline;
+}
+
+.sheet-size-head {
+    transform: rotate(-90deg);
+    width: 26px;
+    font-size: 9px !important;
+    height: 14px !important;
+    font-weight: bold !important;
+}
+
+.sheet-size-select {
+    width: 17px;
+    font-size: 13px
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* This is to remove the arrow of select element in IE */
+select.sheet-size-select::-ms-expand {	display: none; }
+select.sheet-size-select{
+    -webkit-appearance: none;
+    appearance: none;
+    text-align-last:center;
+}
+
 /* ---------------- ability conditional sections ------------*/
 
 .sheet-has-faith,
@@ -285,7 +328,7 @@ input[type=number].sheet-cp-input {
     grid-area: abilities-head; 
     display: flex;
     background: #000000;
-    height: 100%;
+    height: 85%;
 }
 
 .sheet-abilities-head .sheet-table-head {
@@ -295,6 +338,12 @@ input[type=number].sheet-cp-input {
     font-size: 13px;
     font-weight: bold;
 }
+
+
+.sheet-abilities-head .sheet-ability-name {
+    width: 23.4%;
+}
+
 
 .sheet-ability-head-text {
     vertical-align: sub;
@@ -320,9 +369,9 @@ input[type=text].sheet-ability-name {
 textarea.sheet-ability-effect {
     vertical-align: top;
     overflow: hidden;
-    width: 60%;
-    min-width: 60%;
-    max-width: 60%;
+    width: 56%;
+    min-width: 56%;
+    max-width: 56%;
     min-height: 17px;
     font-size: 13px;
     font-family: 'Blinker';
@@ -357,9 +406,9 @@ textarea.sheet-gear-characteristic,
 input[type=text].sheet-gear-characteristic {
     vertical-align: top;
     overflow: hidden;
-    width: 73%;
-    min-width: 73%;
-    max-width: 73%;
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
     min-height: 17px;
     font-size: 13px;
     font-family: 'Blinker';
@@ -1182,7 +1231,8 @@ input[type=number].sheet-stat {
 }
 
 button.sheet-stat-roll {
-    width: 103px;
+    width: 85px;
+    font-size: 17px !important;
 }
 
 input.sheet-stat-temp {
